@@ -1,5 +1,6 @@
 "use strict"
 
+const libraryBooks = [];
 
 function Book(title, author, pageNum, isRead)
 {

@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.page{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr;
+}
+
+.topPart{
+    background-color: rgba(255, 224, 122, 0.575);
+    grid-row: 1 / span 1;
+}
+
+.bottomPart{
+    background-color:rgb(255, 170, 170);
+    grid-row: 2 / span 1;
+}
+
+.card{
+    width: 200px;
+    height:200px;
+    border: 2px black solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+    margin: 10px;
+
+    background-color: rgb(211, 211, 211);
+}
