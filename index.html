@@ -12,10 +12,10 @@
 
 <body>
     <div class="page">
-        <div class="topPart">
-            <button class="add">click me<img src="" alt="" class="addImage"></button>
+        <div class="top-part">
+            <button class="addBookBtn"><img src="./images/plusFile.svg" alt="" class="add-image"></button>
         </div>
-        <div class="bottomPart">
+        <div class="bottom-part">
             <div class="card">
                 <p class="bookTitle">
                     lord of The rings
@@ -27,126 +27,29 @@
                     tolkien
                 </p>
                 <form action="">
-                    <label for="isRead">Read</label>
-                    <input type="checkbox" id="isRead" name="read">
+                    <label for="isRead1">Read</label>
+                    <input type="checkbox" id="isRead1" name="read">
                 </form>
                 <img src="" alt="remove" class="remove">
             </div>
-            <div class="card">
-                <p class="bookTitle">
-                    lord of The rings
-                </p>
-                <p class="pageNum">
-                    560p
-                </p>
-                <p class="author">
-                    tolkien
-                </p>
-                <form action="">
-                    <label for="isRead">Read</label>
-                    <input type="checkbox" id="isRead" name="read">
-                </form>
-                <img src="" alt="remove" class="remove">
-            </div>
-            <div class="card">
-                <p class="bookTitle">
-                    lord of The rings
-                </p>
-                <p class="pageNum">
-                    560p
-                </p>
-                <p class="author">
-                    tolkien
-                </p>
-                <form action="">
-                    <label for="isRead">Read</label>
-                    <input type="checkbox" id="isRead" name="read">
-                </form>
-                <img src="" alt="remove" class="remove">
-            </div>
-            <div class="card">
-                <p class="bookTitle">
-                    lord of The rings
-                </p>
-                <p class="pageNum">
-                    560p
-                </p>
-                <p class="author">
-                    tolkien
-                </p>
-                <form action="">
-                    <label for="isRead">Read</label>
-                    <input type="checkbox" id="isRead" name="read">
-                </form>
-                <img src="" alt="remove" class="remove">
-            </div>
-            <div class="card">
-                <p class="bookTitle">
-                    lord of The rings
-                </p>
-                <p class="pageNum">
-                    560p
-                </p>
-                <p class="author">
-                    tolkien
-                </p>
-                <form action="">
-                    <label for="isRead">Read</label>
-                    <input type="checkbox" id="isRead" name="read">
-                </form>
-                <img src="" alt="remove" class="remove">
-            </div>
-            <div class="card">
-                <p class="bookTitle">
-                    lord of The rings
-                </p>
-                <p class="pageNum">
-                    560p
-                </p>
-                <p class="author">
-                    tolkien
-                </p>
-                <form action="">
-                    <label for="isRead">Read</label>
-                    <input type="checkbox" id="isRead" name="read">
-                </form>
-                <img src="" alt="remove" class="remove">
-            </div>
-            <div class="card">
-                <p class="bookTitle">
-                    lord of The rings
-                </p>
-                <p class="pageNum">
-                    560p
-                </p>
-                <p class="author">
-                    tolkien
-                </p>
-                <form action="">
-                    <label for="isRead">Read</label>
-                    <input type="checkbox" id="isRead" name="read">
-                </form>
-                <img src="" alt="remove" class="remove">
-            </div>
-            <div class="card">
-                <p class="bookTitle">
-                    lord of The rings
-                </p>
-                <p class="pageNum">
-                    560p
-                </p>
-                <p class="author">
-                    tolkien
-                </p>
-                <form action="">
-                    <label for="isRead">Read</label>
-                    <input type="checkbox" id="isRead" name="read">
-                </form>
-                <img src="" alt="remove" class="remove">
-            </div>
-
-
         </div>
+
+        <dialog class="bookModal">
+            <form class="bookForm">
+                <label for="bookName">Book Name:</label>
+                <input type="text" id="bookName" placeholder="Red Flower" required>
+                <label for="pageNum">Number of Pages:</label>
+                <input type="number" id="pageNum">
+                <label for="author">Author:</label>
+                <input type="text" id="author">
+                <label for="isRead">Read</label>
+                <input type="checkbox" id="isRead" name="read">
+                <label for="bookCover">Book Cover:</label>
+                <input type="file" id="bookCover" accept="image/png, image/jpeg">
+                <button type="submit">Submit</button>
+                <button class="closeBtn">close</button>
+            </form>
+        </dialog>
     </div>
 </body>
 

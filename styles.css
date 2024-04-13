@@ -11,12 +11,12 @@
     grid-template-columns: 1fr;
 }
 
-.topPart{
+.top-part{
     background-color: rgba(255, 224, 122, 0.575);
     grid-row: 1 / span 1;
 }
 
-.bottomPart{
+.bottom-part{
     background-color:rgb(255, 170, 170);
     grid-row: 2 / span 1;
     display: grid;
@@ -35,3 +35,33 @@
     justify-content: space-between;
     background-color: rgb(211, 211, 211);
 }
+
+.top-part{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-image{
+    height: 50px;
+    width: auto;
+}
+
+.load-book{
+   
+}
+
+.hidden{
+   /*  display: none;*/
+}
+
+.bookModal{
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 600px;
+    width: 400px;
+}
+
+
