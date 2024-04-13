@@ -5,7 +5,7 @@ const modalCloseBtn = document.querySelector(".closeBtn");
 const bookAddBtn = document.querySelector(".addBookBtn");
 const submitBtn = document.querySelector(".bookSubmit");
 const cardContainer = document.querySelector(".bottom-part");
-
+const removeBtn = document.querySelector(".remove");
 //Form variables for book
 const iBookName = document.querySelector("#bookName");
 const iPageNumber = document.querySelector("#pageNum");
@@ -45,24 +45,28 @@ function AddBookToLibrary(){
     );
     console.log(newBook.Info());
     libraryBooks.push(newBook);
-    UpdateHtml(newBook);
+    UpdateHtml();
 }
 
-function UpdateHtml(newbook){
+function UpdateHtml(){
+    cardContainer.innerHTML = "";
+    for(let [index,book] of libraryBooks.entries())
+    {
 cardContainer.insertAdjacentHTML("beforeend", `  
-                <div class="card">
+                <div class="card" data-index = ${index}>
                 <p class="bookTitle">
-                    ${newbook.title}
+                    ${book.title}
                 </p>
                 <p class="pageNum">
-                    ${newbook.pageNum}
+                    ${book.pageNum}
                 </p>
                 <p class="author">
-                     ${newbook.author}
+                     ${book.author}
                 </p>
                 <button class="read">Read</button>
                 <button class="remove">Remove</button>
-            </div>`);
+            </div>`);  
+        }
 }
 
 bookAddBtn.addEventListener("click", ()=>{
@@ -84,4 +88,16 @@ submitBtn.addEventListener("click", (e)=>{
        bookModal.close();
     }
 
+});
+
+
+cardContainer.addEventListener("click", (e) => {
+    if(e.target.classList.contains("remove"))
+    {
+        const removedBook = e.target.closest(".card");
+        const bookIndex =  +e.target.getAttribute("data-index");
+        libraryBooks.splice(bookIndex,1);
+        removedBook.remove();
+        UpdateHtml();
+    }
 });
