@@ -60,11 +60,8 @@ cardContainer.insertAdjacentHTML("beforeend", `
                 <p class="author">
                      ${newbook.author}
                 </p>
-                <form action="">
-                    <label for="isRead1">Read</label>
-                    <input type="checkbox" id="isRead1" name="read">
-                </form>
-                <img src="" alt="remove" class="remove">
+                <button class="read">Read</button>
+                <button class="remove">Remove</button>
             </div>`);
 }
 
@@ -72,7 +69,8 @@ bookAddBtn.addEventListener("click", ()=>{
     bookModal.showModal();
 });
 
-modalCloseBtn.addEventListener("click", ()=>{
+modalCloseBtn.addEventListener("click", (e)=>{
+    e.preventDefault();
     bookModal.close();
 });
 

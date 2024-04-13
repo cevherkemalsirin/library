@@ -27,14 +27,40 @@
     padding: 10px;
 }
 
+/* each seperate card books*/
 .card{
     height:200px;
-    border: 2px black solid;
+    border: 2px rgb(19, 15, 15) solid;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color:#222831;
+    background-color:#ffffff;
+    padding: 10px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+.remove , .read {
+    background-color:  #FF6868;
+    border-radius: 30px;
+    height: 30px;
+    width: 80px;
+    box-shadow: 1px 1px 2px;
+    font-weight: bold;
+}
+
+.read {
+      background-color: #DCFFB7;
+}
+
+.read:hover{
+     background-color: #b8ff6b;
+}
+
+.remove:hover{
+    background-color:  #ff4444;
 }
 
 .top-part{
@@ -106,7 +132,7 @@ input[type="checkbox"]
     opacity: 0.7;
 }
 
-.bookForm__buttons button{
+.bookForm__buttons button {
     height: 30px;
     width: 60px;
     box-shadow: 1px 1px 2px;
@@ -114,7 +140,7 @@ input[type="checkbox"]
 }
 
 .bookSubmit{
-        background-color: #DCFFB7;
+    background-color: #DCFFB7;
 }
 
 .closeBtn{
@@ -124,3 +150,5 @@ input[type="checkbox"]
 button:focus{
     border: 1px orange solid;
 }
+
+
