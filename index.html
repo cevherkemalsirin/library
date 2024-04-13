@@ -38,26 +38,26 @@
             <form class="bookForm">
                 <div class="bookForm__bookInfo">
                     <label for="bookForm__bookName">Book Name:</label>
-                    <input type="text" id="bookName" placeholder="Hobbit" required>
+                    <input type="text" id="bookName" placeholder="Hobbit" name="bookName" required>
                 </div>
                 <div class="bookForm__bookInfo">
                     <label for="pageNum">Number of Pages:</label>
-                    <input type="number" id="pageNum">
+                    <input type="number" id="pageNum" name="pageNum" required>
                 </div>
                 <div class="bookForm__bookInfo">
                     <label for="author">Author:</label>
-                    <input type="text" id="author">
+                    <input type="text" id="author" name="bookAuthor" required>
                 </div>
                 <div class="bookForm__bookInfo">
                     <label for="isRead">Read:</label>
-                    <input type="checkbox" id="isRead" name="read">
+                    <input type="checkbox" id="isRead" name="read" name="isRead">
                 </div>
                 <div class="bookForm__bookInfo">
                     <label for="bookCover">Book Cover:</label>
-                    <input type="file" id="bookCover" accept="image/png, image/jpeg">
+                    <input type="file" id="bookCover" accept="image/png, image/jpeg" name="bookCover">
                 </div>
                 <div class="bookForm__buttons">
-                    <button type="submit">Submit</button>
+                    <button class="bookSubmit" type="submit">Submit</button>
                     <button class="closeBtn" autofocus>Cancel</button>
                 </div>
             </form>
